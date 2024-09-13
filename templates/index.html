@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Linkkari</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1 class="glowing-title">YouTube-videosta linkkari-päivitys</h1>
+        <div class="input-container">
+            <input type="text" id="youtube-url" placeholder="Syötä YouTube-videon URL">
+            <button id="process-btn">Käsittele</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>LinkedIn-päivitys</h2>
+            <textarea id="linkedin-post" readonly></textarea>
+            <button id="copy-btn">Kopioi</button>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Käsitellään videota...</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

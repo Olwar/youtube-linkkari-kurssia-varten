@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Vaaleampi sininen taustaväri */
+    height: 100%;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f8ff; /* Muutetaan partikkelien taustaväri samaksi */
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    text-align: center;
+    color: #0a192f;
+    margin-bottom: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.glowing-title {
+    animation: glow 3s ease-in-out infinite;
+    color: #1e90ff; /* Muutettu siniseksi (Dodger Blue) */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff;
+    }
+    50% {
+        text-shadow: 0 0 20px #1e90ff, 0 0 30px #1e90ff, 0 0 40px #1e90ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff;
+    }
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #0a192f;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #0a192f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#process-btn {
+    border-radius: 0 5px 5px 0;
+}
+
+button:hover {
+    background-color: #1e2a3e;
+}
+
+#result {
+    margin-top: 2rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #0a192f;
+    border-radius: 5px;
+    resize: none;
+}
+
+#copy-btn {
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #0a192f;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
